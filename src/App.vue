@@ -2,7 +2,7 @@
   <div id="app">
     
 <div class="w-full text-rspnd">
-  {{tenant}}
+  {{tenantData}}
 </div>
    
   </div>
@@ -12,9 +12,15 @@
 import { doc, onSnapshot } from "firebase/firestore";
 import {db} from "./firebase"
 export default {
+  props: [{
+    tenant: {
+      type: String,
+      required: true
+    }
+  }],
   data(){
     return{
-      tenant: null
+      tenantData: null
     }
   },
   methods:{
@@ -22,8 +28,8 @@ export default {
       this.getTenant()
     },
     getTenant(){
-      onSnapshot(doc(db, "tenants", "DirNZfLx0KQVFp0g7f93"), (doc) => {
-        this.tenant = {...doc.data(), id: doc.id}
+      onSnapshot(doc(db, "tenants", this.tenant), (doc) => {
+        this.tenantData = {...doc.data(), id: doc.id}
     });
     }
   },

@@ -16,10 +16,14 @@
     "webpack": "^5.79.0"
   },
   "devDependencies": {
+    "@tailwindcss/postcss7-compat": "^2.2.17",
     "@vue/cli-plugin-pwa": "~5.0.0",
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-plugin-vuex": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "autoprefixer": "^9.8.8",
+    "postcss": "^8.4.21",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17",
     "vue-template-compiler": "^2.6.14"
   },
   "description": "## Project setup ``` npm install ```",

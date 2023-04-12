@@ -4,6 +4,7 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 import 'document-register-element/build/document-register-element'
+import './assets/tailwind.css';
 
 import vueCustomElement from 'vue-custom-element'
 Vue.use(vueCustomElement)

@@ -7,10 +7,13 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "document-register-element": "^1.14.10",
     "register-service-worker": "^1.7.2",
     "vue": "^2.6.14",
+    "vue-custom-element": "^3.3.0",
     "vue-router": "^3.5.1",
-    "vuex": "^3.6.2"
+    "vuex": "^3.6.2",
+    "webpack": "^5.79.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-pwa": "~5.0.0",
@@ -18,5 +21,10 @@
     "@vue/cli-plugin-vuex": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
     "vue-template-compiler": "^2.6.14"
-  }
+  },
+  "description": "## Project setup ``` npm install ```",
+  "main": "vue.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

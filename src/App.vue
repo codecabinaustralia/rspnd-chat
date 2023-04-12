@@ -1,9 +1,36 @@
 <template>
   <div id="app">
-    <nav>
-      <div class="w-full bg-rspnd text-white">Chat online</div>
-    </nav>
-    <router-view/>
+    
+<div class="w-full text-rspnd">
+  {{tenant}}
+</div>
+   
   </div>
 </template>
+
+<script>
+import { doc, onSnapshot } from "firebase/firestore";
+import {db} from "./firebase"
+export default {
+  data(){
+    return{
+      tenant: null
+    }
+  },
+  methods:{
+    async initiate(){
+      this.getTenant()
+    },
+    getTenant(){
+      onSnapshot(doc(db, "tenants", "DirNZfLx0KQVFp0g7f93"), (doc) => {
+        this.tenant = {...doc.data(), id: doc.id}
+    });
+    }
+  },
+  created(){
+    this.initiate()
+  }
+
+}
+</script>
 
